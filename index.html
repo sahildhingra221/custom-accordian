@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $(".accordian-button").click(function(){
+  // remove this line to keep what is opened
+  	$(".accordian-wrapper").not((this).closest('.accordian-wrapper')).removeClass("expand-para");
+    $(this).closest('.accordian-wrapper').toggleClass("expand-para");
+  });
+});
+</script>
+<style> 
+.accordian-data, .accordian-button {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+.accordian-data {
+  font-size:0;
+  transition:all 0.25s ease-in-out;
+}
+.accordian-data:first-line { font-size:20px; }
+.expand-para .accordian-data{
+	font-size:20px!important;
+}
+.accordian-arrow{
+    display:inline-block;
+  transition:all 0.25s ease-in-out;
+}
+.expand-para .accordian-arrow{
+	transform:rotate(-90Deg);
+}
+
+</style>
+</head>
+<body>
+
+<div class="accordian-wrapper">
+<div class="accordian-button">
+Click to slide the panel down or up
+<span class="accordian-arrow">></span>
+</div>
+<div class="accordian-data">Click to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or up</div>
+</div>
+
+<div class="accordian-wrapper">
+<div class="accordian-button">
+Click to slide the panel down or up
+<span class="accordian-arrow">></span>
+</div>
+<div class="accordian-data">Click to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or upClick to slide the panel down or up</div>
+</div>
+
+
+
+
+</body>
+</html>
